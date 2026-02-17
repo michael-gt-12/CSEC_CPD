@@ -1,28 +1,11 @@
-count = 0
-a = [None]*5
+matrix = []
 for i in range(5):
-    b = "".join(input().split())
-    a[i] = b
+    row = list(map(int,input().split()))
+    matrix.append(row)
 for i in range(5):
-    for j in range(5):
-        if a[i][j] == "1":
-            row = i+1
-            col = j+1
-while row < 3 or row > 3:
-    if row < 3:
-        row = row + 1
-        count = count + 1
-    elif row > 3:
-        row = row - 1
-        count = count + 1
-    
-
-while col < 3 or col > 3:
-    if col < 3:
-        col = col + 1
-        count = count + 1
-    elif col > 3:
-        col = col - 1
-        count = count + 1
-    
-print(count)
+    if 1 in matrix[i]:
+        row = i+1
+        column = matrix[i].index(1)+1
+        break
+step = abs(row-3) + abs(column-3)
+print(step)
