@@ -1,16 +1,15 @@
 n = int(input())
 s = input()
-s = list(s)
-A = 0
-D = 0
-for i in range(n):
-    if s[i]=="A":
-        A = A+1
+anton = 0
+danik = 0
+for char in s:
+    if char == "A":
+        anton += 1
     else:
-        D = D+1
-if A > D:
+        danik += 1
+if anton > danik:
     print("Anton")
-elif A < D:
+elif anton < danik:
     print("Danik")
 else:
     print("Friendship")
