@@ -1,11 +1,9 @@
-num= input()
-n,h = num.split()
-n,h = int(n),int(h)
-w = 0
-a = list(map(int , input().split()))
-for i in range(n):
-    if a[i]<=h:
-        w = w + 1
+n , h = map(int,input().split())
+heights = list(map(int,input().split()))
+count = 0
+for height in heights:
+    if height > h:
+        count += 2
     else:
-        w = w + 2
-print(w)
+        count += 1
+print(count)
